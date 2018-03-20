@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zjitc.country.mapper.CountryMapper" >
+  <resultMap id="BaseResultMap" type="com.zjitc.country.pojo.Country">
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="Region" jdbcType="VARCHAR" property="region" />
+    <result column="SurfaceArea" jdbcType="FLOAT" property="surfaceArea" />
+    <result column="IndepYear" jdbcType="INTEGER" property="indepYear" />
+    <result column="Population" jdbcType="INTEGER" property="population" />
+    <result column="LifeExpectancy" jdbcType="FLOAT" property="lifeExpectancy" />
+    <result column="GNP" jdbcType="FLOAT" property="GNP" />
+    <result column="HeadOfState" jdbcType="VARCHAR" property="headOfState" />
+    <result column="Capital" jdbcType="INTEGER" property="capital" />
+    <result column="Code2" jdbcType="VARCHAR" property="code2" />
+  </resultMap>
+  <select id="selectAllCountry" resultMap="BaseResultMap">
+    SELECT *
+    FROM country
+  </select>
+</mapper>
